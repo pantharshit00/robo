@@ -1,4 +1,5 @@
 // Sensor Pin vars
+// Sensor code is for HR-04 I am assuming this is the correct model
 const int trigPin = 9;
 const int echoPin = 10;
 
