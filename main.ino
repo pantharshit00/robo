@@ -1,7 +1,3 @@
-// IMPORTANT DEAL WITH PIN NO CORRECTLY
-
-// Sensor Pin vars
-// Sensor code is for HR-04 I am assuming this is the correct model
 const int trigPin = 9;
 const int echoPin = 10;
 
@@ -10,8 +6,8 @@ const int echoPin = 10;
 const int motorPin1 = 5; // Pin 14 of L293
 const int motorPin2 = 6; // Pin 10 of L293
 //Motor B
-const int motorPin3 = 10; // Pin  7 of L293
-const int motorPin4 = 9;  // Pin  2 of L293
+const int motorPin3 = 4; // Pin  7 of L293
+const int motorPin4 = 3;  // Pin  2 of L293
 
 long duration;
 int distance;
@@ -63,6 +59,7 @@ void startMotorClockwise()
   digitalWrite(motorPin2, LOW);
   digitalWrite(motorPin3, HIGH);
   digitalWrite(motorPin4, LOW);
+  Serial.print("DONE");
 }
 
 void startMotorsAntiClockwise()
@@ -71,6 +68,7 @@ void startMotorsAntiClockwise()
   digitalWrite(motorPin2, HIGH);
   digitalWrite(motorPin3, LOW);
   digitalWrite(motorPin4, HIGH);
+  Serial.print("DONEBB");
 }
 
 void stopMotors()
